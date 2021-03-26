@@ -1,0 +1,20 @@
+x=input()
+list=[int(i) for i in x.split()]
+n=list[0]
+b=list[1]
+c=list[2]
+rezb=0
+rezc=0
+putere=1
+while n != 0:
+    cifra=n%10
+    rezb=rezb+cifra*putere
+    putere=putere*b
+    n=int(n/10)
+putere=1
+while rezb != 0:
+    cifra=rezb%c
+    rezc=rezc+cifra*putere
+    putere=putere*10
+    rezb=int(rezb/c)
+print(rezc)
