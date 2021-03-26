@@ -19,3 +19,4 @@ else:
             break
         fileout.write(str(i)+" ")
     #if my element is bigger than lim I stop
+
