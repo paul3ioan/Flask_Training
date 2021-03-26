@@ -1,12 +1,15 @@
-# This is a sample Python script.
+class Preturi_uorezculapti():
+    def __init__(self, nume, cant):
+        self.name=nume
+        self.price=(10, 8, 11, 9.5)
+        self.quantity=cant
+    def __str__(self):
+        return "Esti prost nu stii sintaxa"
+    def raportcantpret(self):
+        return max([self.quantity/i for i in self.price])
+    def minpret(self):
+        return min([i for i in self.price])
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-n=int(input())
-for i in range(n, 0, -1):
-    if(i%2==1):
-        print(i, end=" ")
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+aliment=Preturi_uorezculapti("uorez cu lapti", 500)
+print(aliment.raportcantpret())
+print(aliment.minpret())
